@@ -1,6 +1,6 @@
 package com.bridgelabz;
-//Float Find Max
-public class GenericsMaximum1 {
+//Added String Find Max
+public class GenericsMaximum4 {
 
 	public static int maximum(Integer x, Integer y, Integer z) {
 		Integer max = x;
@@ -20,10 +20,20 @@ public class GenericsMaximum1 {
 		return max;
 	}
 
+	public static String stringMaximum(String x, String y, String z) {
+		String max = x;
+		if (y.compareTo(max) > 0)
+			max = y;
+		if (z.compareTo(max) > 0)
+			max = z;
+		return max;
+	}
+
 	public static void main(String[] args) {
 		// Integer[] intArray = {3,5,6};
 		System.out.println(maximum(2, 6, 8));
 		System.out.println(floatMaximum(2.5f, 6.8f, 8.8f));
+		System.out.println(stringMaximum("Apple", "Pear", "Mango"));
 
 	}
 }
